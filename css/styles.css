@@ -12,6 +12,10 @@
     --description-card-color: #F4F4FD;
     --description-card-bg: #4D5AE5;
     --modal-window: #FCFCFC;
+    --modal-btn-close-bg: #E7E9FC;
+    --modal-btn-close-bg-hover: #404BBF;
+    --modal-close: #2E2F42;
+    --modal-close-hover: #FFFFFF;
 }
 
 body{
@@ -454,8 +458,10 @@ img {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    opacity: 1;
 }
 .wrap-clos-icon-modal {
+    display: block;
     width: 24px;
     height: 24px;
     border-radius: 50%;
@@ -464,25 +470,37 @@ img {
     position: relative;
     margin-top: 24px;
     margin-left: 360px;
+    transition-property: background-color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+
+}
+.wrap-clos-icon-modal:hover,
+.wrap-clos-icon-modal:focus {
+    background-color: var(--modal-btn-close-bg-hover);
+    fill: var(--modal-close-hover);
 }
 .close-modal {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    fill: var(--modal-close);
+    transition-property: fill;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+}
+.close-modal:hover,
+.close-modal:focus {
+    fill: var(--modal-close-hover);
 }
 .is-hidden {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    margin: -1px;
-    border: 0;
-    padding: 0;
-
-    white-space: nowrap;
-    clip-path: inset(100%);
-    clip: rect(0 0 0 0);
-    overflow: hidden;
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: fill;
+    transition: opacity 150ms ease-in-out 1000ms;
 }
 
 /* PORTFOLIO */
