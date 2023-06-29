@@ -381,6 +381,7 @@ img {
 .link-clients-icons:hover,
 .link-clients-icons:focus {
     border-color: var(--hover-list-color);
+    color: var(--hover-list-color);
 }
 .link-clients-icons:hover .clients-icon, 
 .link-clients-icons:focus .clients-icon {
@@ -467,7 +468,7 @@ img {
     background: rgba(46, 47, 66, 0.40);
     flex-shrink: 0;
     position: fixed;
-    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1); 
 }
 .modal {
     width: 408px;
